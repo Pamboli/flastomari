@@ -1,10 +1,12 @@
 import "./App.css";
+import { StepRenderer } from "./components/StepRenderer";
+import { StepProvider } from "./providers/StepProvider";
 
 function App() {
   return (
-    <main className="w-screen h-screen">
-      <h1>APP</h1>
-    </main>
+    <StepProvider>
+      <StepRenderer />
+    </StepProvider>
   );
 }
 
