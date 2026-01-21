@@ -1,11 +1,29 @@
 import { locale } from "../locale";
 import { useStep } from "../providers/StepProvider";
 import { useKeyListener } from "../hooks/useKeyListener";
+import { useEffect, useState } from "react";
+import { getRandomWords, RandomWord } from "../services/words.service";
 
 export function HomeScreen() {
-  const { nextStep } = useStep();
+  const { setStep } = useStep();
 
-  useKeyListener(nextStep);
+  const [words, setWords] = useState<RandomWord[]>([]);
+
+  useKeyListener(() => {
+    if (words.length < 1) {
+      return;
+    }
+    setStep({ step: "roulette", words });
+  });
+
+  useEffect(() => {
+    async function getWords() {
+      const words = await getRandomWords(10);
+      setWords(words);
+    }
+
+    getWords();
+  }, []);
 
   return (
     <div className="w-full h-full justify-center items-center text-center flex flex-col">
