@@ -1,43 +1,62 @@
-import {
-  createContext,
-  PropsWithChildren,
-  useContext,
-  useMemo,
-  useState,
-} from "react";
+import { createContext, useContext, useMemo, useState } from "react";
+import { RandomWord } from "../services/words.service";
+import { HomeScreen } from "../screens/Home";
+import { Roulette } from "../screens/Roulette";
+import { MainLayout } from "../layout/MainLayout";
 
-const STEPS = ["home", "roulette", "word", "record", "regards"] as const;
-type Step = (typeof STEPS)[number];
+type Step =
+  | {
+      step: "home";
+    }
+  | {
+      step: "roulette";
+      words: RandomWord[];
+    }
+  | {
+      step: "word";
+      word: RandomWord;
+    }
+  | {
+      step: "record";
+    }
+  | {
+      step: "regards";
+    };
+
+type StepName = Step["step"];
 
 type StepContextValue = {
-  step: Step;
-  nextStep: () => void;
-  reset: () => void;
-  index: number;
+  step: StepName;
+  setStep: (step: Step) => void;
 };
 
 const StepContext = createContext<StepContextValue | undefined>(undefined);
 
-export function StepProvider({ children }: PropsWithChildren) {
-  const [step, setStep] = useState<Step>(STEPS[0]);
+export function StepProvider() {
+  const [step, setStep] = useState<Step>({ step: "home" });
 
-  const stepIndex = STEPS.indexOf(step);
+  const value = useMemo(() => ({ step: step.step, setStep }), [step]);
 
-  const nextStep = () => {
-    setStep((current) => {
-      const index = STEPS.indexOf(current);
-      return STEPS[index + 1] ?? STEPS[0];
-    });
-  };
+  function getStepScreen() {
+    switch (step.step) {
+      case "home":
+        return <HomeScreen />;
+      case "roulette":
+        return <Roulette words={step.words} />;
+      case "word":
+        return "Word";
+      case "record":
+        return "Record";
+      case "regards":
+        return "Regards";
+    }
+  }
 
-  const reset = () => setStep(STEPS[0]);
-
-  const value = useMemo(
-    () => ({ step, nextStep, reset, index: stepIndex }),
-    [step]
+  return (
+    <StepContext.Provider value={value}>
+      <MainLayout>{getStepScreen()}</MainLayout>
+    </StepContext.Provider>
   );
-
-  return <StepContext.Provider value={value}>{children}</StepContext.Provider>;
 }
 
 export function useStep() {
