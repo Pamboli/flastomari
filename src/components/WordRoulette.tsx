@@ -6,6 +6,7 @@ import {
   useAnimationFrame,
 } from "framer-motion";
 import { useEffect, useState } from "react";
+import { RandomWord } from "../services/words.service";
 
 const duration = 0.1;
 const animationDuration = 5;
@@ -15,8 +16,8 @@ const transforms = [0, 0.25, 0.75, 1];
 const translations = [-translation, -translation, translation, translation];
 
 type Props = {
-  words: string[];
-  onComplete?: () => void;
+  words: RandomWord[];
+  onComplete?: (id: RandomWord["id"]) => void;
 };
 
 export function WordRoulette({ words, onComplete }: Props) {
@@ -38,10 +39,10 @@ export function WordRoulette({ words, onComplete }: Props) {
       ease: "circOut",
       onComplete: () => {
         setIsRunning(false);
-        onComplete?.();
+        onComplete?.(words[wordIndex].id);
       },
     });
-  }, [onComplete, speed]);
+  }, [onComplete, speed, wordIndex, words]);
 
   const progress1 = useTransform(
     scaledTime,
@@ -97,13 +98,13 @@ export function WordRoulette({ words, onComplete }: Props) {
           className="text-big font-bold"
           style={{ position: "absolute", opacity: opacity1, y: y1, inset: 0 }}
         >
-          {words[wordIndex]}
+          {words[wordIndex].swearword}
         </motion.div>
         <motion.div
           className="text-big font-bold"
           style={{ position: "absolute", opacity: opacity2, y: y2, inset: 0 }}
         >
-          {words[wordIndex2]}
+          {words[wordIndex2].swearword}
         </motion.div>
       </div>
     );
@@ -115,7 +116,7 @@ export function WordRoulette({ words, onComplete }: Props) {
         style={{ transform: `translateY(${finalStyle.y}px)` }}
         className="inset-0 absolute text-big font-bold"
       >
-        {words[wordIndex]}
+        {words[wordIndex].swearword}
       </span>
     </div>
   );

@@ -5,7 +5,15 @@ export type RandomWord = {
   swearword: string;
 };
 
-export type Word = RandomWord & {};
+export type WordUse = {
+  id: number;
+  use: string;
+};
+
+export type Word = RandomWord & {
+  description?: string;
+  uses: WordUse[];
+};
 
 export async function getRandomWords(amount: number) {
   const db = await getDb();
@@ -16,4 +24,39 @@ export async function getRandomWords(amount: number) {
   );
 
   return rows;
+}
+
+export async function getWord(id: RandomWord["id"]) {
+  const db = await getDb();
+
+  const word = await db.select<Word[]>(
+    `
+      SELECT
+        s.id,
+        s.swearword,
+        s.description,
+        COALESCE(
+          (
+            SELECT
+              json_group_array (
+                CASE
+                  WHEN su.id IS NOT NULL THEN json_object ('id', su.id, 'use', su.use_description)
+                END
+              )
+            FROM
+              swearword_uses su
+            WHERE
+              su.swearword_id = s.id
+          ),
+          '[]'
+        ) as uses
+      FROM
+        swearwords s
+      GROUP BY
+        s.id
+    `,
+    [id],
+  );
+
+  return word[0];
 }
