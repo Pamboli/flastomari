@@ -41,7 +41,7 @@ export function WordRoulette({ words, loops = 1, onComplete }: Props) {
   });
 
   return (
-    <span key={currentWord.id} className="text-big font-bold">
+    <span key={currentWord.id} className="font-bold text-nowrap text-7xl">
       {currentWord.swearword}
     </span>
   );
