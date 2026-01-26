@@ -1,8 +1,9 @@
 import { createContext, useContext, useMemo, useState } from "react";
-import { RandomWord } from "../services/words.service";
 import { HomeScreen } from "../screens/Home";
 import { Roulette } from "../screens/Roulette";
 import { MainLayout } from "../layout/MainLayout";
+import { WordScreen } from "../screens/Word";
+import { RandomWord, Word } from "../services/words/types";
 
 type Step =
   | {
@@ -14,7 +15,7 @@ type Step =
     }
   | {
       step: "word";
-      word: RandomWord;
+      word: Word;
     }
   | {
       step: "record";
@@ -44,7 +45,7 @@ export function StepProvider() {
       case "roulette":
         return <Roulette words={step.words} />;
       case "word":
-        return "Word";
+        return <WordScreen word={step.word} />;
       case "record":
         return "Record";
       case "regards":
