@@ -2,7 +2,8 @@ import { locale } from "../locale";
 import { useStep } from "../providers/StepProvider";
 import { useKeyListener } from "../hooks/useKeyListener";
 import { useEffect, useState } from "react";
-import { getRandomWords, RandomWord } from "../services/words.service";
+import { getRandomWords } from "../services/words/words.service";
+import { RandomWord } from "../services/words/types";
 
 export function HomeScreen() {
   const { setStep } = useStep();
