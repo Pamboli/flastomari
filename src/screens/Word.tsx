@@ -28,7 +28,8 @@ export function WordScreen({ word }: Props) {
       <h1 className="font-bold text-big">{word.swearword}</h1>
       <h2 className="text-extra font-bold italic">Extra?</h2>
       <p className="text-extra font-medium">{word.description}</p>
-      <p className="text-uses font-medium mt-auto">{word.use}</p>
+      <div className="flex-1" />
+      <p className="text-uses font-medium">{word.use}</p>
       {allowReturnToHome && (
         <p className="text-uses font-medium animate-pending absolute inset-x-0 bottom-4 text-center">
           {locale.common.return_home}
