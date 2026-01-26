@@ -11,7 +11,11 @@ export function Roulette({ words }: Props) {
   const { setStep } = useStep();
 
   async function handleRouletteComplete(id: RandomWord["id"]) {
-    const word = await getWord(id);
+    const [word] = await Promise.all([
+      getWord(id),
+      new Promise((res) => setTimeout(res, 1000)),
+    ]);
+
     setStep({ step: "word", word });
   }
 

@@ -1,7 +1,8 @@
 {
   "common": {
     "title": "Flastomari en català",
-    "institution": "Institució Mossèn Alcover"
+    "institution": "Institució Mossèn Alcover",
+    "return_home": "Pitja una tecla per tornar a l'inici"
   },
   "home": {
     "main_screen": "Pantalla principal?",
