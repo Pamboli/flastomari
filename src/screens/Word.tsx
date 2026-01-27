@@ -3,24 +3,25 @@ import { Word } from "../services/words/types";
 import { useKeyListener } from "../hooks/useKeyListener";
 import { useStep } from "../providers/StepProvider";
 import { locale } from "../locale";
+import { ActionText } from "../components/ActionText";
 
 type Props = {
   word: Word;
 };
 
 export function WordScreen({ word }: Props) {
-  const [allowReturnToHome, setAllowReturnToHome] = useState(false);
+  const [allowToContinue, setAllowToContinue] = useState(false);
 
   const { setStep } = useStep();
 
-  setTimeout(() => setAllowReturnToHome(true), 3000);
+  setTimeout(() => setAllowToContinue(true), 3000);
 
   useKeyListener(() => {
-    if (!allowReturnToHome) {
+    if (!allowToContinue) {
       return;
     }
 
-    setStep({ step: "home" });
+    setStep({ step: "record", word });
   });
 
   return (
@@ -30,10 +31,10 @@ export function WordScreen({ word }: Props) {
       <p className="text-extra font-medium">{word.description}</p>
       <div className="flex-1" />
       <p className="text-uses font-medium">{word.use}</p>
-      {allowReturnToHome && (
-        <p className="text-uses font-medium animate-pending absolute inset-x-0 bottom-4 text-center">
-          {locale.common.return_home}
-        </p>
+      {allowToContinue && (
+        <div className="absolute inset-x-0 bottom-4 text-center">
+          <ActionText>{locale.common.continue}</ActionText>
+        </div>
       )}
     </div>
   );

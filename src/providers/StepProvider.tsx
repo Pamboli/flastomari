@@ -4,24 +4,19 @@ import { Roulette } from "../screens/Roulette";
 import { MainLayout } from "../layout/MainLayout";
 import { WordScreen } from "../screens/Word";
 import { RandomWord, Word } from "../services/words/types";
+import { RecordScreen } from "../screens/Record";
 
 type Step =
   | {
-      step: "home";
+      step: "home" | "regards";
     }
   | {
       step: "roulette";
       words: RandomWord[];
     }
   | {
-      step: "word";
+      step: "word" | "record";
       word: Word;
-    }
-  | {
-      step: "record";
-    }
-  | {
-      step: "regards";
     };
 
 type StepName = Step["step"];
@@ -47,7 +42,7 @@ export function StepProvider() {
       case "word":
         return <WordScreen word={step.word} />;
       case "record":
-        return "Record";
+        return <RecordScreen word={step.word} />;
       case "regards":
         return "Regards";
     }

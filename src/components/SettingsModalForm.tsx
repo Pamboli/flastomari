@@ -2,11 +2,17 @@ import { Field, Label, Switch } from "@headlessui/react";
 import { locale } from "../locale";
 import { useEffect, useState } from "react";
 import { AppSettings, Settings } from "../services/Settings";
+import {
+  checkPermission,
+  PermissionResponse,
+  requestPermission,
+} from "tauri-plugin-audio-recorder-api";
 
 export function SettingsModalForm() {
   const settingsStore = Settings.getInstance();
 
   const [settings, setSettings] = useState<AppSettings | null>(null);
+  const [permission, setPermission] = useState<null | PermissionResponse>(null);
 
   useEffect(() => {
     const getInitialSettings = async () => {
@@ -29,7 +35,20 @@ export function SettingsModalForm() {
     await settingsStore.set("recordingStepEnabled", value);
   }
 
-  if (!settings) {
+  const handleRequestPermission = async () => {
+    const permission = await requestPermission();
+    setPermission(permission);
+  };
+
+  useEffect(() => {
+    const getPermission = async () => {
+      const permission = await checkPermission();
+      setPermission(permission);
+    };
+    getPermission();
+  }, []);
+
+  if (!settings || !permission) {
     return null;
   }
 
@@ -49,6 +68,25 @@ export function SettingsModalForm() {
             className="pointer-events-none inline-block size-5 translate-x-0 rounded-full bg-background shadow-lg ring-0 transition duration-200 ease-in-out group-data-checked:translate-x-7"
           />
         </Switch>
+      </Field>
+      <Field>
+        <Label as="p" className="mb-2">
+          {locale.settings.permission}
+        </Label>
+        {permission.granted ? (
+          <p className="text-green-500">{locale.settings.permission_yes}</p>
+        ) : (
+          <div>
+            <p className="text-accent mb-2">{locale.settings.permission_no}</p>
+            <button
+              onClick={handleRequestPermission}
+              type="button"
+              className="text-text bg-background px-5 py-2 rounded-md cursor-pointer"
+            >
+              {locale.settings.permission_request}
+            </button>
+          </div>
+        )}
       </Field>
     </form>
   );

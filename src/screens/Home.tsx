@@ -6,6 +6,7 @@ import { getRandomWords } from "../services/words/words.service";
 import { RandomWord } from "../services/words/types";
 import { SettingsModal } from "../components/SettingsModal";
 import { Settings } from "../services/Settings";
+import { ActionText } from "../components/ActionText";
 
 export function HomeScreen() {
   const { setStep } = useStep();
@@ -55,9 +56,7 @@ export function HomeScreen() {
     <>
       <div className="w-full h-full justify-center items-center text-center flex flex-col">
         <h1 className="text-big font-bold">{locale.home.main_screen}</h1>
-        <h2 className="text-uses font-medium animate-pending">
-          {locale.home.press_to_start}
-        </h2>
+        <ActionText>{locale.home.press_to_start}</ActionText>
       </div>
       <SettingsModal
         isOpen={isOpen}

@@ -6,13 +6,13 @@ CREATE TABLE
     use TEXT
   );
 
--- CREATE TABLE
---   IF NOT EXISTS swearword_uses (
---     id INTEGER PRIMARY KEY AUTOINCREMENT,
---     swearword_id INTEGER NOT NULL,
---     use_description TEXT NOT NULL,
---     FOREIGN KEY (swearword_id) REFERENCES swearwords (id) ON DELETE CASCADE
---   );
+CREATE TABLE
+  IF NOT EXISTS swearword_uses (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    swearword_id INTEGER NOT NULL,
+    FOREIGN KEY (swearword_id) REFERENCES swearwords (id) ON DELETE NO ACTION
+  );
+
 INSERT
 OR IGNORE INTO swearwords (swearword, description, use)
 VALUES
