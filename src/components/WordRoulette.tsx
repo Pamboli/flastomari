@@ -2,7 +2,7 @@ import { useMotionValueEvent, useTime, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { RandomWord } from "../services/words/types";
 
-const DURATION = 5000;
+const DURATION = 8000;
 
 type Props = {
   words: RandomWord[];
