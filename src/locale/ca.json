@@ -6,6 +6,11 @@
   },
   "home": {
     "main_screen": "Pantalla principal?",
-    "press_to_start": "Pitja una tecla per començar"
+    "press_to_start": "Pitja la tecla espai per començar"
+  },
+  "settings": {
+    "title": "Configuració",
+    "recordingStepEnabled": "Mostrar pantalla de gravació",
+    "recordingDevice": "Dispositiu de gravació"
   }
 }

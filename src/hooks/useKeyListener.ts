@@ -6,7 +6,7 @@ type KeyListenerOptions = {
 
 export function useKeyListener(
   callback: (event: KeyboardEvent) => void,
-  { keys }: KeyListenerOptions = {}
+  { keys }: KeyListenerOptions = {},
 ) {
   const handler = useCallback(
     (event: KeyboardEvent) => {
@@ -14,7 +14,7 @@ export function useKeyListener(
         callback(event);
       }
     },
-    [callback, keys]
+    [callback, keys],
   );
 
   useEffect(() => {
