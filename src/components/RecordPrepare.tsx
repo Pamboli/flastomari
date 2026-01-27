@@ -9,7 +9,7 @@ export function RecordPrepare({ setInternalStep, word }: InternalStepProps) {
   });
 
   return (
-    <div className="pt-36 flex flex-col gap-6 h-full">
+    <div className="pt-24 flex flex-col gap-6 h-full">
       <h2 className="text-uses font-bold">{locale.record.word_is}</h2>
       <h1 className="text-big font-bold uppercase">{word.swearword}</h1>
       {!!word.use && (

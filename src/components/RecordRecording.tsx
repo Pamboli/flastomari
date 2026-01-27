@@ -72,7 +72,7 @@ export function RecordRecording({ word, setInternalStep }: InternalStepProps) {
   });
 
   return (
-    <div className="pt-36 flex items-center gap-20 flex-col relative h-full">
+    <div className="pt-24 flex items-center gap-20 flex-col relative h-full">
       <h1 className="text-big font-bold uppercase">{word.swearword}</h1>
       <div className="text-uses font-bold text-background bg-text overflow-hidden w-2xl text-center rounded-4xl flex h-32 items-center">
         {isRecording && (

@@ -25,12 +25,11 @@ export function WordScreen({ word }: Props) {
   });
 
   return (
-    <div className="py-36 h-full flex flex-col relative">
+    <div className="pt-24 h-full flex flex-col relative">
       <h1 className="font-bold text-big">{word.swearword}</h1>
       <h2 className="text-extra font-bold italic">Extra?</h2>
       <p className="text-extra font-medium">{word.description}</p>
-      <div className="flex-1" />
-      <p className="text-uses font-medium">{word.use}</p>
+      <p className="mt-24 text-uses font-medium">{word.use}</p>
       {allowToContinue && (
         <div className="absolute inset-x-0 bottom-4 text-center">
           <ActionText>{locale.common.continue}</ActionText>
