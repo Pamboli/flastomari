@@ -13,11 +13,11 @@ export function RecordHome({ word, setInternalStep }: InternalStepProps) {
       return;
     }
 
-    setStep({ step: "regards" });
+    setStep({ step: "home" });
   });
 
   return (
-    <div className="pt-36 flex flex-col gap-6 h-full">
+    <div className="pt-24 flex flex-col gap-6 h-full">
       <h1 className="text-big font-bold uppercase">{locale.record.title}</h1>
       <h2 className="text-uses font-bold">{locale.record.description}</h2>
       <p className="text-extra">{locale.record.example + word.use}</p>

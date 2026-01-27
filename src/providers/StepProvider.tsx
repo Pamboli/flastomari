@@ -5,6 +5,7 @@ import { MainLayout } from "../layout/MainLayout";
 import { WordScreen } from "../screens/Word";
 import { RandomWord, Word } from "../services/words/types";
 import { RecordScreen } from "../screens/Record";
+import { Regards } from "../screens/Regards";
 
 type Step =
   | {
@@ -44,7 +45,7 @@ export function StepProvider() {
       case "record":
         return <RecordScreen word={step.word} />;
       case "regards":
-        return "Regards";
+        return <Regards />;
     }
   }
 

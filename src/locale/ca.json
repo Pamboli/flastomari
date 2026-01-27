@@ -24,7 +24,7 @@
     "title": "Ara et toca a tu!",
     "description": "Pensa una altra aplicació i grava-la amb el micròfon",
     "example": "Per exemple: ",
-    "continue": "Pitja la tecla espai per continuar",
+    "continue": "Pitja la tecla enter per continuar",
     "skip": "Pitja una altra tecla per ometre la gravació",
     "word_is": "La paraula és",
     "press_to_record": "Pitja una tecla per gravar",
@@ -35,5 +35,8 @@
     "press_continue": "Pitja enter per continuar",
     "press_repeat": "Pitja r per repetir",
     "saving": "Guardant gravació"
+  },
+  "regards": {
+    "thanks": "Gràcies!"
   }
 }
