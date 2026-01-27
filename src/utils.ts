@@ -8,3 +8,5 @@ export async function getAppPath() {
   const path = await appDataDir();
   console.log("Ruta de la app:", path);
 }
+
+export function noop() {}

@@ -2,10 +2,41 @@
   "common": {
     "title": "Flastomari en català",
     "institution": "Institució Mossèn Alcover",
-    "return_home": "Pitja una tecla per tornar a l'inici"
+    "return_home": "Pitja una tecla per tornar a l'inici",
+    "continue": "Pitja una tecla per continuar",
+    "wait": "Espera...",
+    "done": "Fet"
   },
   "home": {
     "main_screen": "Pantalla principal?",
-    "press_to_start": "Pitja una tecla per començar"
+    "press_to_start": "Pitja la tecla espai per començar"
+  },
+  "settings": {
+    "title": "Configuració",
+    "recordingStepEnabled": "Mostrar pantalla de gravació",
+    "recordingDevice": "Dispositiu de gravació",
+    "permission": "Permís de gravació",
+    "permission_yes": "Teniu permís de gravació",
+    "permission_no": "No teniu permís de gravació",
+    "permission_request": "Demanar permís"
+  },
+  "record": {
+    "title": "Ara et toca a tu!",
+    "description": "Pensa una altra aplicació i grava-la amb el micròfon",
+    "example": "Per exemple: ",
+    "continue": "Pitja la tecla enter per continuar",
+    "skip": "Pitja una altra tecla per ometre la gravació",
+    "word_is": "La paraula és",
+    "press_to_record": "Pitja una tecla per gravar",
+    "recording": "Estàs gravant",
+    "press_to_stop": "Pitja una tecla quan hagis acabat",
+    "press_to_play": "Pitja espai per escoltar la gravació",
+    "playing": "Reproduint audio",
+    "press_continue": "Pitja enter per continuar",
+    "press_repeat": "Pitja r per repetir",
+    "saving": "Guardant gravació"
+  },
+  "regards": {
+    "thanks": "Gràcies!"
   }
 }

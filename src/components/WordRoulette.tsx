@@ -2,7 +2,7 @@ import { useMotionValueEvent, useTime, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { RandomWord } from "../services/words/types";
 
-const DURATION = 5000;
+const DURATION = 8000;
 
 type Props = {
   words: RandomWord[];
@@ -41,7 +41,7 @@ export function WordRoulette({ words, loops = 1, onComplete }: Props) {
   });
 
   return (
-    <span key={currentWord.id} className="text-big font-bold">
+    <span key={currentWord.id} className="font-bold text-nowrap text-7xl">
       {currentWord.swearword}
     </span>
   );
