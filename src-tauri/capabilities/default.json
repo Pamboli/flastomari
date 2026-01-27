@@ -11,6 +11,24 @@
     "sql:default",
     "sql:allow-execute",
     "store:default",
-    "audio-recorder:default"
+    "audio-recorder:default",
+    "core:path:default",
+    "fs:default",
+    {
+      "identifier": "fs:allow-read-file",
+      "allow": [
+        {
+          "path": "$APPDATA/**"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-rename",
+      "allow": [
+        {
+          "path": "$APPDATA/**"
+        }
+      ]
+    }
   ]
 }
