@@ -3,12 +3,17 @@ export type RandomWord = {
   swearword: string;
 };
 
-export type WordUse = {
+export type Word = {
   id: number;
-  use: string;
+  swearword: string;
+  description?: string;
+  use: WordUse;
+  defaultUse?: string;
+  audio: string;
 };
 
-export type Word = RandomWord & {
-  description?: string;
-  use?: string;
+export type WordUse = {
+  id: number;
+  isPublic: boolean;
+  audio: string;
 };

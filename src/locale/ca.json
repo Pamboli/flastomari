@@ -8,8 +8,11 @@
     "done": "Fet"
   },
   "home": {
-    "main_screen": "Pantalla principal?",
-    "press_to_start": "Pitja la tecla espai per començar"
+    "main_screen": "BENVOLGUDA AL FLASTOMARI!",
+    "rule1": "Activa el FLASTOMARI a través del teclat i segueix les instruccions.",
+    "rule2": "Se’t mostrarà una paraula, la seva definició i unes aplicacions.",
+    "rule3": "Després, podràs gravar la teva aplicació per ampliar l'arxiu del nostre FLASTOMARI col·laboratiu.",
+    "press_to_start": "Pitja la tecla ESPAIADORA per a CONTINUAR"
   },
   "settings": {
     "title": "Configuració",
@@ -22,19 +25,23 @@
   },
   "record": {
     "title": "Ara et toca a tu!",
-    "description": "Pensa una altra aplicació i grava-la amb el micròfon",
+    "description": "Pensa una altra aplicació i grava-la!",
     "example": "Per exemple: ",
-    "continue": "Pitja la tecla enter per continuar",
-    "skip": "Pitja una altra tecla per ometre la gravació",
+    "continue": "Pitja la barra ESPAIADORA per a GRAVAR",
+    "skip": "Pitja qualsevol altra tecla per a OMETRE",
     "word_is": "La paraula és",
     "press_to_record": "Pitja una tecla per gravar",
     "recording": "Estàs gravant",
-    "press_to_stop": "Pitja una tecla quan hagis acabat",
-    "press_to_play": "Pitja espai per escoltar la gravació",
-    "playing": "Reproduint audio",
+    "press_to_stop": "Pitja la tecla ESPAIADORA quan hagis ACABAT",
+    "success": "Has gravat correctament una aplicació per a la paraula",
+    "next": "Ara pots escoltar la gravació i desar-la, o tornar a provar-ho.",
+    "pres_to_listen": "Pitja la tecla ESPAIADORA per a ESCOLTAR LA GRAVACIÓ",
+    "record": "Aquesta és la teva GRAVACIÓ de l'aplicació",
+    "playing": "Reproduint la gravació",
     "press_continue": "Pitja enter per continuar",
-    "press_repeat": "Pitja r per repetir",
-    "saving": "Guardant gravació"
+    "press_repeat": "Pitja la tecla “R” per a REPETIR",
+    "press_to_save": "Pitja la tecla ENTER per a DESAR-LA",
+    "saving": "DESANT LA GRAVACIÓ"
   },
   "regards": {
     "thanks": "Gràcies!"

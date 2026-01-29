@@ -31,9 +31,9 @@ export async function saveTemporaryRecord(wordId: Word["id"]) {
     const result = await db.execute(
       `
         INSERT INTO
-          swearword_uses (swearword_id)
+          swearword_uses (swearword_id, is_default, audio)
         VALUES
-          ($1)        
+          ($1, 0, 'null')        
       `,
       [wordId],
     );
