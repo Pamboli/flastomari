@@ -16,13 +16,13 @@ export function HomeScreen() {
   const [isFirstTime, setIsFirstTime] = useState(false);
 
   useEffect(() => {
-    const getIsFirstTime = async () => {
+    const getSettings = async () => {
       const isFirstTime = await Settings.getInstance().get("isFirstTime");
       setIsFirstTime(isFirstTime);
       setIsOpen(isFirstTime);
     };
 
-    getIsFirstTime();
+    getSettings();
   }, []);
 
   useKeyListener((ev) => {
@@ -54,9 +54,18 @@ export function HomeScreen() {
 
   return (
     <>
-      <div className="w-full h-full justify-center items-center text-center flex flex-col">
-        <h1 className="text-big font-bold">{locale.home.main_screen}</h1>
-        <ActionText>{locale.home.press_to_start}</ActionText>
+      <div className="pt-24 w-full h-full justify-between items-center flex flex-col">
+        <h1 className="text-big font-bold text-center">
+          {locale.home.main_screen}
+        </h1>
+        <ol className="w-full text-extra list-decimal flex flex-col gap-4">
+          <li>{locale.home.rule1}</li>
+          <li>{locale.home.rule2}</li>
+          <li>{locale.home.rule3}</li>
+        </ol>
+        {words.length > 0 && (
+          <ActionText>{locale.home.press_to_start}</ActionText>
+        )}
       </div>
       <SettingsModal
         isOpen={isOpen}

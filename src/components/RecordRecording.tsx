@@ -58,10 +58,8 @@ export function RecordRecording({ word, setInternalStep }: InternalStepProps) {
   const handleStopRecording = async () => {
     await stopRecording();
     setIsRecording(false);
-    setInternalStep("listen");
+    setInternalStep("explain");
   };
-
-  // const handleStartRecording = async () => {};
 
   useKeyListener(() => {
     if (!isRecording) {
@@ -87,7 +85,9 @@ export function RecordRecording({ word, setInternalStep }: InternalStepProps) {
       </div>
       {isRecording && (
         <div className="flex-1 justify-center items-center flex">
-          <ActionText>{locale.record.press_to_stop}</ActionText>
+          <ActionText>
+            <p className="font-bold text-uses">{locale.record.press_to_stop}</p>
+          </ActionText>
         </div>
       )}
     </div>

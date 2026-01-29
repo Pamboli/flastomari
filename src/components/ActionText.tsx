@@ -5,5 +5,5 @@ type Props = {
 };
 
 export function ActionText({ children }: Props) {
-  return <h2 className="text-uses font-bold animate-pending">{children}</h2>;
+  return <h2 className="text-small font-medium animate-pending">{children}</h2>;
 }

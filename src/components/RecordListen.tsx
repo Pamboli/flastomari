@@ -17,12 +17,19 @@ export function RecordListen({ word, setInternalStep }: InternalStepProps) {
         return;
       }
 
-      playFromAppData("temporal", () => setHasFinished(true));
+      playFromAppData(
+        {
+          audioType: "use",
+          fileName: "temporal",
+          isPublic: false,
+        },
+        () => setHasFinished(true),
+      );
     }
 
     if (ev.key === "r") {
       if (!hasFinished) return;
-      setInternalStep("prepare");
+      setInternalStep("recording");
     }
 
     if (ev.key === "Enter") {
@@ -32,22 +39,31 @@ export function RecordListen({ word, setInternalStep }: InternalStepProps) {
 
   return (
     <div className="pt-24 flex items-center gap-20 flex-col relative h-full">
+      <h2 className="font-bold text-uses">{locale.record.record}</h2>
       <h1 className="text-big font-bold uppercase">{word.swearword}</h1>
       <div className="text-uses font-bold text-background bg-text overflow-hidden w-auto text-center rounded-4xl flex h-32 items-center text-nowrap">
         {isPlaying && (
-          <div className="bg-blue-300 h-full w-auto aspect-square flex items-center justify-center">
+          <div className="bg-cyan-400 h-full w-auto aspect-square flex items-center justify-center">
             <SpeakerIcon className="size-12 text-text" />
           </div>
         )}
         <p className="flex-1 px-6">
-          {isPlaying ? locale.record.playing : locale.record.press_to_play}
+          {isPlaying ? locale.record.playing : locale.record.pres_to_listen}
         </p>
         <div />
       </div>
       {hasFinished && (
         <div className="flex-1 flex-col justify-center items-center flex">
-          <ActionText>{locale.record.continue}</ActionText>
-          <ActionText>{locale.record.press_repeat}</ActionText>
+          <ActionText>
+            <div className="text-center">
+              <p className="font-bold text-uses">
+                {locale.record.press_to_save}
+              </p>
+              <p className="mt-4 text-small font-medium">
+                {locale.record.press_repeat}
+              </p>
+            </div>
+          </ActionText>
         </div>
       )}
     </div>

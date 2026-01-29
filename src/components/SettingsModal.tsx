@@ -2,6 +2,8 @@ import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { locale } from "../locale";
 import { SettingsModalForm } from "./SettingsModalForm";
 import { noop } from "../utils";
+import { useEffect } from "react";
+import { Settings } from "../services/Settings";
 
 type Props = {
   isOpen: boolean;
@@ -9,7 +11,17 @@ type Props = {
   isFirstTime: boolean;
 };
 
-export function SettingsModal({ isOpen = false, onClose }: Props) {
+export function SettingsModal({ isOpen = false, onClose, isFirstTime }: Props) {
+  useEffect(() => {
+    const removeFirstTime = async () => {
+      await Settings.getInstance().set("isFirstTime", false);
+    };
+
+    if (isFirstTime) {
+      removeFirstTime();
+    }
+  }, [isFirstTime]);
+
   return (
     <Dialog open={isOpen} onClose={noop} className="relative z-50">
       <div className="fixed inset-0 flex w-screen items-center justify-center p-4 text-background">

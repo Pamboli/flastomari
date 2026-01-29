@@ -1,40 +1,66 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { Word } from "../services/words/types";
-import { useKeyListener } from "../hooks/useKeyListener";
 import { useStep } from "../providers/StepProvider";
-import { locale } from "../locale";
-import { ActionText } from "../components/ActionText";
+import { useAudioPlayer } from "../hooks/useAudioPlayer";
+import { Settings } from "../services/Settings";
 
 type Props = {
   word: Word;
 };
 
-export function WordScreen({ word }: Props) {
-  const [allowToContinue, setAllowToContinue] = useState(false);
+const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
+export function WordScreen({ word }: Props) {
+  const { use } = word;
+  const { playFromAppData } = useAudioPlayer();
   const { setStep } = useStep();
 
-  setTimeout(() => setAllowToContinue(true), 3000);
+  useEffect(() => {
+    let isMounted = true;
 
-  useKeyListener(() => {
-    if (!allowToContinue) {
-      return;
-    }
+    const runSequence = async () => {
+      const recordEnabled = await Settings.getInstance().get(
+        "recordingStepEnabled",
+      );
 
-    setStep({ step: "record", word });
-  });
+      if (!isMounted) return;
+
+      await wait(500);
+      playFromAppData(
+        { audioType: "word", isPublic: true, fileName: word.audio },
+        async () => {
+          if (!isMounted) return;
+
+          await wait(1000);
+          playFromAppData(
+            { audioType: "use", isPublic: use.isPublic, fileName: use.audio },
+            async () => {
+              if (!isMounted) return;
+
+              await wait(500);
+              setStep({
+                step: recordEnabled ? "record" : "regards",
+                word,
+              });
+            },
+          );
+        },
+      );
+    };
+
+    runSequence();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [word, use, playFromAppData, setStep]);
 
   return (
-    <div className="pt-24 h-full flex flex-col relative">
-      <h1 className="font-bold text-big">{word.swearword}</h1>
-      <h2 className="text-extra font-bold italic">Extra?</h2>
-      <p className="text-extra font-medium">{word.description}</p>
-      <p className="mt-24 text-uses font-medium">{word.use}</p>
-      {allowToContinue && (
-        <div className="absolute inset-x-0 bottom-4 text-center">
-          <ActionText>{locale.common.continue}</ActionText>
-        </div>
-      )}
+    <div className="h-full flex flex-col relative">
+      <div className="flex-1 flex flex-col justify-center">
+        <h1 className="font-bold text-[180px] leading-44">{word.swearword}</h1>
+        <p className="text-uses">{word.description}</p>
+      </div>
     </div>
   );
 }
