@@ -37,48 +37,48 @@ VALUES
     3,
     'Pixa',
     'Membre viril, penis.',
-    'Escures tu avui? I una pixa! Te toca a tu',
+    'Escures tu avui? I una pixa! Te toca a tu.',
     'D3.mp3'
   ),
   (
     4,
     'Rave',
-    'Membre viril, exclamació de disconformitat, cosa de baixa qualitat',
+    'Membre viril, exclamació de disconformitat, cosa de baixa qualitat.',
     'I un rave!',
     'D4.mp3'
   ),
   (
     5,
     'Cotorra',
-    'Genitals femenins',
-    'Sa madona de Sa Torre / es pa negre li fa mal / però no n''hi fa es pardal / quan li fiquen a sa cotorra',
+    'Genitals femenins.',
+    'Sa madona de Sa Torre / es pa negre li fa mal / però no n''hi fa es pardal / quan el té dins sa cotorra.',
     'D5.mp3'
   ),
   (
     6,
     'Fufa',
-    'Vulva',
-    'No me toquis sa fufa, que no estic per tonteries',
+    'Vulva.',
+    'No me toquis sa fufa, que no estic per tonteries.',
     'D6.mp3'
   ),
   (
     7,
     'Figa',
-    'Parts genitals externes de la dona',
-    'Estic fins a sa figa, no m''empipis més',
+    'Parts genitals externes de la dona.',
+    'Estic fins a sa figa, no m''empipis més.',
     'D7.mp3'
   ),
   (
     8,
     'Cap de fava (amb orelles)',
-    'Curt',
-    'és ben cap de fava aquell policia, sempre me posa multes',
+    'Curt.',
+    'És ben cap de fava aquell policia, sempre me posa multes.',
     'D8.mp3'
   ),
   (
     9,
     'Cap de suro',
-    'Persona nècia, ignorant, curta d''enteniment',
+    'Persona nècia, ignorant, curta d''enteniment.',
     'T''has equivocat de portal, cap de suro!',
     'D9.mp3'
   ),
@@ -92,43 +92,43 @@ VALUES
   (
     11,
     'Curt/-a de gambals',
-    'Persona amb poca capacitat mental, ximple',
-    'En Joan no pot ser més curt de gambals, s''ha tornat a deixar ses claus de caseva',
+    'Persona amb poca capacitat mental, ximple.',
+    'En Joan no pot ser més curt de gambals, s''ha tornat a deixar ses claus de caseva.',
     'D11.mp3'
   ),
   (
     12,
     'Pixapins',
     'Persona de ciutat que va al camp els caps de setmana o a les vacances.',
-    NULL,
+    'Si te''n vas d''excursió un diumenge segons a on, t''ho pots trobar tot ple de pixapins.',
     'D12.mp3'
   ),
   (
     13,
     'Enviar (algú) a pastar fang',
-    'enviar a mal viatge, acomiadar despectivament',
-    'Encara surts amb na Maria? què va, me va enviar a pastar fang.',
+    'Enviar a mal viatge, acomiadar despectivament.',
+    'Encara surts amb na Maria? Què va, me va enviar a pastar fang.',
     'D13.mp3'
   ),
   (
     14,
     'Enviar (algú) a porgar fum',
     'Engegar algú, desfer-se d’una persona molesta, sovint de mala manera.',
-    'Estic cansat/da de sentir-te, veste''n a porgar fum!',
+    'Estic cansat/da de sentir-te, ves-te''n a porgar fum!',
     'D14.mp3'
   ),
   (
     15,
     'Ves-te''n a pondre',
     'Engegar algú, desfer-se d’una persona molesta, sovint de mala manera.',
-    NULL,
+    'No en vull saber res de tu! Te''n pots anar a pondre.',
     'D15.mp3'
   ),
   (
     16,
     'Ves-te''n a comptar llavors',
     'Engegar algú, desfer-se d’una persona molesta, sovint de mala manera.',
-    NULL,
+    'Ves-te''n a comptar llavors si tan avorrit estàs de noltros.',
     'D16.mp3'
   ),
   (
@@ -141,15 +141,15 @@ VALUES
   (
     18,
     'Tenir el cul en punta',
-    'Persona inquieta, que no es conforma',
-    'Em Joan mai vol seure a classe, te es cul en punta.',
+    'Persona inquieta, que no es conforma.',
+    'En Joan mai vol seure a classe, té es cul en punta.',
     'D18.mp3'
   ),
   (
     19,
     'Llepaous',
     'Llepacrestes, baix adulador.',
-    'Ara vens de bones? no siguis llepaous.',
+    'Ara vens de bones? No siguis llepaous.',
     'D19.mp3'
   ),
   (
@@ -162,7 +162,7 @@ VALUES
   (
     21,
     'Pep Merda',
-    'Persona de no-res, menyspreable',
+    'Persona de no-res, menyspreable.',
     'Ets més beneit que en Pep merda!',
     'D21.mp3'
   ),
@@ -176,161 +176,161 @@ VALUES
   (
     23,
     'Cap de trons',
-    'Cap avalotat, de poc seny',
-    NULL,
+    'Cap avalotat, de poc seny.',
+    'Ets més cap de trons! No en fas ni una de bona.',
     'D23.mp3'
   ),
   (
     24,
     'Capbuit',
-    'Persona de poc seny, que obra irreflexivament',
-    'Ets un cap buit, mai saps on has aparcat es cotxe',
+    'Persona de poc seny, que obra irreflexivament.',
+    'Ets un cap buit, mai saps on has aparcat es cotxe.',
     'D24.mp3'
   ),
   (
     25,
     'Cap de gri',
-    'Per indicar el poc seny, la lleugeresa en les obres, la falta de prudència, la irreflexió,',
-    NULL,
+    'Per indicar el poc seny, la lleugeresa en les obres, la falta de prudència, la irreflexió.',
+    'En Joan s''ha enfilat en es campanar. És un bon cap de gri.',
     'D25.mp3'
   ),
   (
     26,
     'Cap verjo',
-    'Per indicar el poc seny, la lleugeresa en les obres, la falta de prudència, la irreflexió,',
-    NULL,
+    'Per indicar el poc seny, la lleugeresa en les obres, la falta de prudència, la irreflexió.',
+    'No t''acostis tan al precipici, cap verjo!',
     'D26.mp3'
   ),
   (
     27,
     'Capsigrany',
-    'Capbuit, home de poc enteniment',
-    'Vaja capsigrany que estàs fet',
+    'Capbuit, home de poc enteniment.',
+    'Vaja capsigrany que estàs fet.',
     'D27.mp3'
   ),
   (
     28,
     'Cap d''ase',
-    'persona d''enteniment molt curt',
-    'ets més cap d''ase, no te banyis a nes riuet',
+    'Persona d''enteniment molt curt.',
+    'Ets més cap d''ase, no te banyis al riuet.',
     'D28.mp3'
   ),
   (
     29,
     'Cap de poal',
-    'persona d''enteniment molt curt',
+    'Persona d''enteniment molt curt.',
     'Què no ho entens, cap de poal?',
     'D29.mp3'
   ),
   (
     30,
     'Cap de meló',
-    'persona d''enteniment molt curt',
-    'Cap de meló! fes es cap viu!',
+    'Persona d''enteniment molt curt.',
+    'Cap de meló! Fes es cap viu!',
     'D30.mp3'
   ),
   (
     31,
     'Cap de carabassa',
-    'Per indicar el poc seny, la lleugeresa en les obres, la falta de prudència, la irreflexió,',
-    'Què passa cap de carabasa?!',
+    'Per indicar el poc seny, la lleugeresa en les obres, la falta de prudència, la irreflexió.',
+    'Què passa, cap de carabasa?',
     'D31.mp3'
   ),
   (
     32,
     'Poc cervell',
-    'persona de poc enteniment, que no reflexiona.',
-    'Poc cervell! Pensa un poc abans de xerrar',
+    'Persona de poc enteniment, que no reflexiona.',
+    'Poc cervell! Pensa un poc abans de xerrar.',
     'D32.mp3'
   ),
   (
     33,
     'Cervell de canari',
-    'persona de poc enteniment, que no reflexiona.',
+    'Persona de poc enteniment, que no reflexiona.',
     'Cervell de canari! No n''encertes ni una!',
     'D33.mp3'
   ),
   (
     34,
     'Pere Punyetes',
-    'Persona que tendeix a fastiguejar i molestar',
+    'Persona que tendeix a fastiguejar i molestar.',
     'Deixa de molestar la teva germana i no siguis Pere Punyetes!',
     'D34.mp3'
   ),
   (
     35,
     'Tros de quòniam',
-    'Persona molt beneita o inútil',
-    'No entens mai res, tros de quòniam',
+    'Persona molt beneita o inútil.',
+    'No entens mai res, tros de quòniam.',
     'D35.mp3'
   ),
   (
     36,
     'Tros de soca',
-    'Persona molt dura d’enteniment',
-    'Li ho expliques i no ho pilla, és un tros de soca',
+    'Persona molt dura d’enteniment.',
+    'Li ho expliques i no ho pilla, és un tros de soca.',
     'D36.mp3'
   ),
   (
     37,
     'Tros de suro',
-    'Persona curta d’enteniment o que no s’assabenta de res',
-    'No té cap sentit això que dius, tros de suro',
+    'Persona curta d’enteniment o que no s’assabenta de res.',
+    'No té cap sentit això que dius, tros de suro.',
     'D37.mp3'
   ),
   (
     38,
     'Més curt que una màniga de guardapits',
-    'Persona molt curta d’enteniment, dit en forma de comparació humorística',
-    'No li demanis massa, és més curt que una màniga de guardapits',
+    'Persona molt curta d’enteniment, dit en forma de comparació humorística.',
+    'No li demanis massa, és més curt que una màniga de guardapits.',
     'D38.mp3'
   ),
   (
     39,
     'No ets més curt perquè ton pare va dir basta',
-    'Burla molt directa per dir que algú és curt d’enteniment al límit',
-    'Has signat sense llegir, no ets més curt perquè ton pare va dir basta',
+    'Burla molt directa per dir que algú és curt d’enteniment al límit.',
+    'Has signat sense llegir, no ets més curt perquè ton pare va dir basta.',
     'D39.mp3'
   ),
   (
     40,
     'Més pesat que un quilo de merda damunt sa cella',
-    'Persona molt pesada i insistent, dita molt grollera i exagerada',
-    'Deixa de repetir-ho, ets més pesat que un quilo de merda damunt sa cella',
+    'Persona molt pesada i insistent, dita molt grollera i exagerada.',
+    'Deixa de repetir-ho, ets més pesat que un quilo de merda damunt sa cella.',
     'D40.mp3'
   ),
   (
     41,
     'Més lleig que pegar a un pare',
-    'Persona o cosa molt lletja, comparació feta per remarcar que és molt desagradable',
+    'Persona o cosa molt lletja, comparació feta per remarcar que és molt desagradable.',
     'Aquest jersei és més lleig que pegar a un pare.',
     'D41.mp3'
   ),
   (
     42,
     'Més beneit que pixar d''esquenes',
-    'Persona molt beneita, comparació grollera i humorística',
-    'S’ho ha cregut tot, és més beneit que pixar d’esquenes',
+    'Persona molt beneita, comparació grollera i humorística.',
+    'S’ho ha cregut tot, és més beneit que pixar d’esquenes.',
     'D42.mp3'
   ),
   (
     43,
     'Titafluixa',
-    'Persona covarda o amb poca empenta',
+    'Persona covarda o amb poca empenta.',
     'Ets un titafluixa. Mai t''atreveixes a res.',
     'D43.mp3'
   ),
   (
     44,
     'Titapansida',
-    'Persona sense vigor, apocada',
+    'Persona sense vigor, apocada.',
     'Sempre te fas enrere a l’últim moment, quina titapansida.',
     'D44.mp3'
   ),
   (
     45,
     'Torracollons',
-    'Pesat, que tot el temps es fica on no el demanen',
+    'Pesat, que tot el temps es fica on no el demanen.',
     'Ets un torracollons, pots callar una estona?',
     'D45.mp3'
   ),
@@ -344,21 +344,21 @@ VALUES
   (
     47,
     'Collonera',
-    'Escrot, també s’usa com a insult sinònim de beneit o curt d’enteniment',
-    'No pots ser més collonera',
+    'Escrot, també s’usa com a insult sinònim de beneit o curt d’enteniment.',
+    'No pots ser més collonera.',
     'D47.mp3'
   ),
   (
     48,
     'Acollonar-se',
-    'Tenir por a fer qualque cosa',
+    'Tenir por a fer qualque cosa.',
     'Al final no vens a jugar? T''has acollonat?',
     'D48.mp3'
   ),
   (
     49,
     'Colló',
-    'Curt d''enteniment',
+    'Curt d''enteniment.',
     'S''ha de ser colló per ser del Barça.',
     'D49.mp3'
   ),
@@ -366,62 +366,62 @@ VALUES
     50,
     'Collonarro',
     'Curt d''enteniment, però més suau. De vegades dit amb to afectuós.',
-    'Sé cert que vas de bromes, Collonarro!',
+    'Sé cert que vas de bromes, collonarro!',
     'D50.mp3'
   ),
   (
     51,
     'Collons de porc',
-    'Groller, que diu barbaritats',
+    'Groller, que diu barbaritats.',
     'Collons de porc! Deixa de fer beneitures.',
     'D51.mp3'
   ),
   (
     52,
     'Malparit/ida',
-    'Persona dolenta i amb mala fe',
+    'Persona dolenta i amb mala fe.',
     'M’ha enganyat i a més a mes s''enriu, és un malparit.',
     'D52.mp3'
   ),
   (
     53,
     'Malnascut/uda',
-    'Persona sense escrúpols i de mala pasta',
-    'El que ha fet no té nom, és un malnascut.',
+    'Persona sense escrúpols i de mala pasta.',
+    'El que ha fet no té nom,  és un malnascut.',
     'D53.mp3'
   ),
   (
     54,
     'Mala pècora',
-    'Mala persona i retorçada, amb un component de gènere',
-    'Ho ha fet expressament, quina mala pècora',
+    'Mala persona i retorçada, amb un component de gènere.',
+    'Ho ha fet expressament, quina mala pècora.',
     'D54.mp3'
   ),
   (
     55,
     'Malcriat/ada',
-    'Persona consentida, sense límits i amb poca educació',
-    'No accepta un no, és un malcriat',
+    'Persona consentida, sense límits i amb poca educació.',
+    'No accepta un no, és un malcriat.',
     'D55.mp3'
   ),
   (
     56,
     'Maleducat/ada',
-    'Mancat de respecte i de cortesia en el tracte',
-    'No interrompis, ets un maleducat',
+    'Mancat de respecte i de cortesia en el tracte.',
+    'No interrompis, ets un maleducat.',
     'D56.mp3'
   ),
   (
     57,
     'Beneit/a',
-    'Ingenu, de bona fe, que es deixa enredar',
-    'No siguis beneit, que t’estan prenent el pèl',
+    'Ingenu, de bona fe, que es deixa enredar.',
+    'No siguis beneit, que t’estan prenent es pèl.',
     'D57.mp3'
   ),
   (
     58,
     'Betzol/a',
-    'Persona grollera, maleducada, poc fina',
+    'Persona grollera, maleducada, poc fina.',
     'En Sion és un betzol, mai no me saluda.',
     'D58.mp3'
   ),
@@ -429,27 +429,27 @@ VALUES
     59,
     'Bàmbol/a',
     'Curt de reflexos, atabalat, que fa el ridícul.',
-    'Na Joana sempre està empanada, és un poc bàmbola',
+    'Na Joana sempre està empanada, és un poc bàmbola.',
     'D59.mp3'
   ),
   (
     60,
     'Ruc/a',
-    'Tossut i/o curt d’enteniment',
+    'Tossut i/o curt d’enteniment.',
     'Ets un ruc: t’ho he explicat tres vegades!',
     'D60.mp3'
   ),
   (
     61,
     'Ximple',
-    'Poca-solta, que fa o diu ximpleries',
+    'Poca-solta, que fa o diu ximpleries.',
     'Aquestes coses que molles són de ximple.',
     'D61.mp3'
   ),
   (
     62,
     'Curt/a',
-    'Curt d''enteniment',
+    'Curt d''enteniment.',
     'En Pere Joan és curt, deixa''l fer.',
     'D62.mp3'
   ),
@@ -457,63 +457,63 @@ VALUES
     63,
     'Babau/a',
     'Beneit i despistat, fàcil d’enganyar.',
-    'Em vaig creure el missatge… quin babau que som',
+    'Me vaig creure es missatge… quin babau que som.',
     'D63.mp3'
   ),
   (
     64,
     'Me la rebufa',
-    'Expressió per referir-se a que ens és indiferent alguna cosa amb to de provocació',
+    'Expressió per referir-se a que ens és indiferent alguna cosa amb to de provocació.',
     'Sa mare d''en Toni ens ha fet croquetes. Me la rebufa!',
     'D64.mp3'
   ),
   (
     65,
     'Què putes m''és a mi',
-    'Expressió per referir-se a que ens és indiferent alguna cosa amb to agressiu',
-    'N''Alícia s''ha enrollat amb en Jord Ique putes m''és a mi?',
+    'Expressió per referir-se a que ens és indiferent alguna cosa amb to agressiu.',
+    'N''Alícia s''ha embolicat amb en Jord I que putes m''és a mi?',
     'D65.mp3'
   ),
   (
     66,
     'Me la pela',
-    'Expressió per referir-se a que ens és indiferent alguna cosa',
-    '-Albert, faràs es deures? +Me la pela!',
+    'Expressió per referir-se a que ens és indiferent alguna cosa.',
+    'Albert, faràs es deures? Me la pela!',
     'D66.mp3'
   ),
   (
     67,
     'Cercameuca',
-    'Fer una volta en un acte festiu per intentar lligar amb qualcú',
+    'Fer una volta en un acte festiu per intentar lligar amb qualcú.',
     'Anem a fer una cercameuca! Avui lligues, Joanet!',
     'D67.mp3'
   ),
   (
     68,
     'Aixafaguitarres',
-    'Persona que desbarata o interromp una festa, una activitat divertida',
-    NULL,
+    'Persona que desbarata o interromp una festa, una activitat divertida.',
+    'No tornis a treure aquest tema, per favor. Ets un aixafaguitarres.',
     'D68.mp3'
   ),
   (
     69,
     'Bocamoll/a',
-    'Que tot ho molla, que tot ho conta',
+    'Que tot ho molla, que tot ho conta.',
     'En Marc és un bocamoll, no sap guardar un secret.',
     'D69.mp3'
   ),
   (
     70,
     'Calçasses',
-    'Home exessivament condescendent o que es deixa governar per la parella',
+    'Home exessivament condescendent o que es deixa governar per la parella.',
     'Ets un calçasses, sempre fas lo que ella vol.',
     'D70.mp3'
   ),
   (
     71,
     'Destraler/a',
-    'Mancat de finor',
-    'Fa ses feines com un destraler',
+    'Mancat de finor.',
+    'Fa ses feines com un destraler.',
     'D71.mp3'
   ),
   (
@@ -526,190 +526,190 @@ VALUES
   (
     73,
     'Llemuga',
-    'Persona lenta, massa minuciosa, que s''entreté massa en les coses que fa',
+    'Persona lenta, massa minuciosa, que s''entreté massa en les coses que fa.',
     'Deixa de fer sa llemuga!',
     'D73.mp3'
   ),
   (
     74,
     'Groller/a',
-    'Bast, grosser',
-    'Ets un groller! Només dius guarrades',
+    'Bast, grosser.',
+    'Ets un groller! Només dius guarrades.',
     'D74.mp3'
   ),
   (
     75,
     'Xoquinet',
-    'Curt d''enteniment',
+    'Curt d''enteniment.',
     'Aquest home és un xoquinet!',
     'D75.mp3'
   ),
   (
     76,
     'Endiotenc',
-    'Estúpid',
+    'Estúpid.',
     'Ets un endiotenc tu!',
     'D76.mp3'
   ),
   (
     77,
     'Cap-juger',
-    'Persona sense seny',
-    'Ets ben cap-juger... mira que xiular dins s''iglesi',
+    'Persona sense seny.',
+    'Ets ben cap-juger... mira que xiular dins s''iglesi.',
     'D77.mp3'
   ),
   (
     78,
     'Encapirronat',
-    'obstinat',
-    '¿Ells están encapirronats en fer asades? ¡Venga idò, una raccioneta de blat d''ase per tots ells!',
+    'Obstinat.',
+    'Ells están encapirronats en fer asades? Venga idò, una raccioneta de blat d''ase per tots ells!',
     'D78.mp3'
   ),
   (
     79,
     'Ferrassa',
-    'Persona avariciosa',
-    'uns ferrasses i ets altres mans foradades i tudats',
+    'Persona avariciosa.',
+    'Uns ferrasses i ets altres mans foradades i tudats.',
     'D79.mp3'
   ),
   (
     80,
     'Tapamorros',
-    'allò que obliga algú a callar:',
-    'Te fortré un tapamorros si no calles!',
+    'Allò que obliga algú a callar.',
+    'Te fotré un tapamorros si no calles!',
     'D80.mp3'
   ),
   (
     81,
     'Babaluet',
-    'Beneitot, persona de poc enteniment',
-    'Ai... babaluet.. no sé si ho treuràs',
+    'Beneitot, persona de poc enteniment.',
+    'Ai... babaluet.. no sé si ho treuràs.',
     'D81.mp3'
   ),
   (
     82,
     'Aliardo/a',
-    'Persona inculta, de poc enteniment o de poca moralitat',
-    'És un bol aliardo aquell, no en treu aguller',
+    'Persona inculta, de poc enteniment o de poca moralitat.',
+    'És un bol aliardo aquell, no en treu aguller.',
     'D82.mp3'
   ),
   (
     83,
     'Bajà/na',
-    'Beneitot, mancat del bon ús de la raó',
-    'No siguis bajà, i posa un poc de seny!',
+    'Beneitot, mancat del bon ús de la raó.',
+    'No siguis bajà  i posa un poc de seny!',
     'D83.mp3'
   ),
   (
     84,
     'Baladrer/era',
-    'Que parla a crits o que crida immoderadament',
-    'Aquella veïnada és una baladrera, només crida',
+    'Que parla a crits o que crida immoderadament.',
+    'Aquella veïnada és una baladrera, només crida.',
     'D84.mp3'
   ),
   (
     85,
     'Bandua',
-    'Persona que no va de feina ni d''estar subjecta i que en fa de les seves',
-    'Més valdria que enlloc de fer es bandua, fessis un poc de feina',
+    'Persona que no va de feina ni d''estar subjecta i que en fa de les seves.',
+    'Més valdria que enlloc de fer es bandua, fessis un poc de feina.',
     'D85.mp3'
   ),
   (
     86,
     'Betzà',
-    'Persona gran i beneitota',
-    'Es ben betzà aquell padrinet... li fan fer lo que volen',
+    'Persona gran i beneitota.',
+    'Es ben betzà aquell padrinet... li fan fer lo que volen.',
     'D86.mp3'
   ),
   (
     87,
     'Beina',
-    'Home dolent, depravat',
-    'És un beina aquell home, ningú vol saber res d''ell',
+    'Home dolent, depravat.',
+    'És un beina aquell home, ningú vol saber res d''ell.',
     'D87.mp3'
   ),
   (
     88,
     'Belitre',
-    'Home de poca vergonya i sense escrúpols',
-    'Consol de molts, consol de belitres',
+    'Home de poca vergonya i sense escrúpols.',
+    'Consol de molts, consol de belitres.',
     'D88.mp3'
   ),
   (
     89,
     'Beduí/na',
-    'Persona excessivament ximple, fàcil d''enganyar',
+    'Persona excessivament ximple, fàcil d''enganyar.',
     'És una beduina... s''ho creu tot!',
     'D89.mp3'
   ),
   (
     90,
     'Bobià',
-    'Curt d''enteniment',
-    'quin homo tan bobià!',
+    'Curt d''enteniment.',
+    'Quin homo tan bobià!',
     'D90.mp3'
   ),
   (
     91,
     'Embàlit',
-    'Persona inútil per curtor d''enteniment; persona que no serveix per a res',
+    'Persona inútil per curtor d''enteniment; persona que no serveix per a res.',
     'Aquell no serveix per res, és un bon embàlit!',
     'D91.mp3'
   ),
   (
     92,
     'Estrúmbol',
-    'Persona embambada, aturada, que no té iniciativa o seny per a obrar',
-    'Es va quedar ben aturat, talment un estrúmbol',
+    'Persona embambada, aturada, que no té iniciativa o seny per a obrar.',
+    'Es va quedar ben aturat, talment un estrúmbol.',
     'D92.mp3'
   ),
   (
     93,
     'Mòpia',
-    'Persona curta de gambals, inútil, que fa més nosa que profit',
-    'Pareixes una mòpia, te vols concentrar d''una vegada',
+    'Persona curta de gambals, inútil, que fa més nosa que profit.',
+    'Pareixes una mòpia, te vols concentrar d''una vegada.',
     'D93.mp3'
   ),
   (
     94,
     'Tarambana',
-    'Eixelebrat; que obra sense seny, sense preocupació per la serietat o formalitat',
+    'Eixelebrat; que obra sense seny, sense preocupació per la serietat o formalitat.',
     'Ets ben tarambana tu!',
     'D94.mp3'
   ),
   (
     95,
     'Baliga-balaga',
-    'Home informal, de poca serietat',
-    'Aquí ve gent formal; no''n vull de baligues balagues',
+    'Home informal, de poca serietat.',
+    'Aquí ve gent formal; no en vull de baligues balagues.',
     'D95.mp3'
   ),
   (
     96,
     'Terroler/era',
-    'Aturat, mancat d''iniciativa, curt d''acció; que perd el temps i no sap aprofitar-lo per coses útils',
-    'Terrolera que ets... espavila un poc',
+    'Aturat, mancat d''iniciativa, curt d''acció; que perd el temps i no sap aprofitar-lo per coses útils.',
+    'Terrolera que ets... espavila un poc.',
     'D96.mp3'
   ),
   (
     97,
     'Toixarrut/uda',
-    'Rude, grosser mentalment, estúpid',
+    'Rude, grosser mentalment, estúpid.',
     'És més toixarruda na Joana, sempre va a lo que va!',
     'D97.mp3'
   ),
   (
     98,
     'Tudossa',
-    'Curt d''enteniment; testarrut, obstinat',
-    'Avui dematí un al·lot ben tudossa s''examinava de llatí',
+    'Curt d''enteniment; testarrut, obstinat.',
+    'Avui dematí una al·lota ben tudossa s''examinava de llatí.',
     'D98.mp3'
   ),
   (
     99,
     'Xeubo/a',
-    'Beneitot, bàmbol',
-    'Encara hey hagué fadrines xeubes que se''n anaren amb un moxet',
+    'Beneitot, bàmbol.',
+    'Encara hey hagué fadrines xeubes que se''n anaren amb un moxet.',
     'D99.mp3'
   );
 

@@ -3,16 +3,6 @@ import { getDb } from "./database";
 import { Word } from "./words/types";
 import { rename } from "@tauri-apps/plugin-fs";
 
-let recordingInProgress = false;
-
-export function isRecordingInProgress() {
-  return recordingInProgress;
-}
-
-export function setRecordingInProgress(value: boolean) {
-  recordingInProgress = value;
-}
-
 export async function saveTemporaryRecord(wordId: Word["id"]) {
   const db = await getDb();
 

@@ -25,7 +25,7 @@ export function RecordHome({ word, setInternalStep }: InternalStepProps) {
         <p className="font-bold text-uses uppercase">{word.swearword}</p>
         {!!word.defaultUse && (
           <p className="font-medium text-extra">
-            {`${locale.record.example} “${word.description}”`}
+            {`${locale.record.example} “${word.defaultUse}”`}
           </p>
         )}
       </div>

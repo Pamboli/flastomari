@@ -3,6 +3,7 @@ import { Word } from "../services/words/types";
 import { useStep } from "../providers/StepProvider";
 import { useAudioPlayer } from "../hooks/useAudioPlayer";
 import { Settings } from "../services/Settings";
+import { clsx } from "clsx";
 
 type Props = {
   word: Word;
@@ -58,7 +59,16 @@ export function WordScreen({ word }: Props) {
   return (
     <div className="h-full flex flex-col relative">
       <div className="flex-1 flex flex-col justify-center">
-        <h1 className="font-bold text-[180px] leading-44">{word.swearword}</h1>
+        <h1
+          className={clsx(
+            "font-bold mb-8 uppercase ",
+            word.swearword.length < 15
+              ? "text-[180px] leading-40"
+              : "text-[120px] leading-32",
+          )}
+        >
+          {word.swearword}
+        </h1>
         <p className="text-uses">{word.description}</p>
       </div>
     </div>
