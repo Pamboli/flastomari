@@ -12,7 +12,7 @@
     "rule1": "Activa el FLASTOMARI a través del teclat i segueix les instruccions.",
     "rule2": "Se’t mostrarà una paraula, la seva definició i unes aplicacions.",
     "rule3": "Després, podràs gravar la teva aplicació per ampliar l'arxiu del nostre FLASTOMARI col·laboratiu.",
-    "press_to_start": "Pitja la tecla ESPAIADORA per a CONTINUAR"
+    "press_to_start": "Pitja la barra ESPAIADORA per a CONTINUAR"
   },
   "settings": {
     "title": "Configuració",
@@ -25,21 +25,22 @@
   },
   "record": {
     "title": "Ara et toca a tu!",
-    "description": "Pensa una altra aplicació i grava-la!",
+    "description": "Pensa una altra frase i grava-la!",
     "example": "Per exemple: ",
     "continue": "Pitja la barra ESPAIADORA per a GRAVAR",
     "skip": "Pitja qualsevol altra tecla per a OMETRE",
-    "word_is": "La paraula és",
-    "press_to_record": "Pitja una tecla per gravar",
+    "word_is": "La flastomia és",
+    "press_to_record": "Pitja una tecla per GRAVAR",
     "recording": "Estàs gravant",
-    "press_to_stop": "Pitja la tecla ESPAIADORA quan hagis ACABAT",
+    "press_to_stop": "Pitja la barra ESPAIADORA quan hagis ACABAT",
     "success": "Has gravat correctament una aplicació per a la paraula",
     "next": "Ara pots escoltar la gravació i desar-la, o tornar a provar-ho.",
-    "pres_to_listen": "Pitja la tecla ESPAIADORA per a ESCOLTAR LA GRAVACIÓ",
+    "pres_to_listen": "Pitja la barra ESPAIADORA per a ESCOLTAR LA GRAVACIÓ",
     "record": "Aquesta és la teva GRAVACIÓ de l'aplicació",
     "playing": "Reproduint la gravació",
     "press_continue": "Pitja enter per continuar",
-    "press_repeat": "Pitja la tecla “R” per a REPETIR",
+    "press_repeat": "Pitja la tecla “R” per a REPETIR-LA",
+    "press_discard": "Pitja la tecla “D” per a DESCARTAR-LA",
     "press_to_save": "Pitja la tecla ENTER per a DESAR-LA",
     "saving": "DESANT LA GRAVACIÓ"
   },

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { InternalStepProps } from "../screens/Record";
 import { locale } from "../locale";
 import { MicrophoneIcon } from "../icons/MicrophoneIcon";
@@ -6,54 +6,31 @@ import { ActionText } from "./ActionText";
 import { appDataDir, join } from "@tauri-apps/api/path";
 import { startRecording, stopRecording } from "tauri-plugin-audio-recorder-api";
 import { useKeyListener } from "../hooks/useKeyListener";
-import {
-  isRecordingInProgress,
-  setRecordingInProgress,
-} from "../services/recording.service";
 
 export function RecordRecording({ word, setInternalStep }: InternalStepProps) {
   const [isRecording, setIsRecording] = useState(false);
 
-  useEffect(() => {
-    let cancelled = false;
+  const startAudioRecording = async () => {
+    setIsRecording(true);
 
-    const startAudioRecording = async () => {
-      if (isRecordingInProgress()) return;
-      setRecordingInProgress(true);
+    try {
+      const baseDir = await appDataDir();
+      const recordingPath = await join(
+        baseDir,
+        "recordings",
+        "temporal",
+        "recording",
+      );
 
-      try {
-        const baseDir = await appDataDir();
-        const recordingPath = await join(
-          baseDir,
-          "recordings",
-          "temporal",
-          "recording",
-        );
-
-        await startRecording({
-          outputPath: recordingPath,
-          quality: "high",
-        });
-
-        if (!cancelled) {
-          setIsRecording(true);
-        }
-      } catch (err) {
-        setRecordingInProgress(false);
-        throw err;
-      }
-    };
-
-    startAudioRecording();
-
-    return () => {
-      cancelled = true;
-      if (isRecordingInProgress()) {
-        stopRecording().catch(() => {});
-        setRecordingInProgress(false);
-      }
-    };
-  }, []);
+      await startRecording({
+        outputPath: recordingPath,
+        quality: "high",
+      });
+    } catch (err) {
+      setIsRecording(false);
+      throw err;
+    }
+  };
 
   const handleStopRecording = async () => {
     await stopRecording();
@@ -62,11 +39,11 @@ export function RecordRecording({ word, setInternalStep }: InternalStepProps) {
   };
 
   useKeyListener(() => {
-    if (!isRecording) {
-      return;
+    if (isRecording) {
+      handleStopRecording();
+    } else {
+      startAudioRecording();
     }
-
-    handleStopRecording();
   });
 
   return (
@@ -78,18 +55,18 @@ export function RecordRecording({ word, setInternalStep }: InternalStepProps) {
             <MicrophoneIcon className="size-12 text-text" />
           </div>
         )}
-        <p className="flex-1">
-          {isRecording ? locale.record.recording : locale.common.wait}
+        <p className="flex-1 text-extra">
+          {isRecording
+            ? locale.record.recording
+            : locale.record.press_to_record}
         </p>
         <div />
       </div>
-      {isRecording && (
-        <div className="flex-1 justify-center items-center flex">
-          <ActionText>
-            <p className="font-bold text-uses">{locale.record.press_to_stop}</p>
-          </ActionText>
-        </div>
-      )}
+      <div className="flex-1 justify-center items-center text-center flex">
+        <ActionText>
+          <p className="font-bold text-uses">{locale.record.press_to_stop}</p>
+        </ActionText>
+      </div>
     </div>
   );
 }

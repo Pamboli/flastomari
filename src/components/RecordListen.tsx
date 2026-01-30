@@ -5,10 +5,11 @@ import { SpeakerIcon } from "../icons/SpeakerIcon";
 import { locale } from "../locale";
 import { InternalStepProps } from "../screens/Record";
 import { ActionText } from "./ActionText";
+import { useStep } from "../providers/StepProvider";
 
 export function RecordListen({ word, setInternalStep }: InternalStepProps) {
   const { isPlaying, playFromAppData } = useAudioPlayer();
-
+  const { setStep } = useStep();
   const [hasFinished, setHasFinished] = useState(false);
 
   useKeyListener((ev) => {
@@ -35,6 +36,11 @@ export function RecordListen({ word, setInternalStep }: InternalStepProps) {
     if (ev.key === "Enter") {
       setInternalStep("save");
     }
+
+    if (ev.key === "d") {
+      if (!hasFinished) return;
+      setStep({ step: "regards" });
+    }
   });
 
   return (
@@ -47,7 +53,7 @@ export function RecordListen({ word, setInternalStep }: InternalStepProps) {
             <SpeakerIcon className="size-12 text-text" />
           </div>
         )}
-        <p className="flex-1 px-6">
+        <p className="flex-1 px-6 text-extra">
           {isPlaying ? locale.record.playing : locale.record.pres_to_listen}
         </p>
         <div />
@@ -61,6 +67,9 @@ export function RecordListen({ word, setInternalStep }: InternalStepProps) {
               </p>
               <p className="mt-4 text-small font-medium">
                 {locale.record.press_repeat}
+              </p>
+              <p className="mt-4 text-small font-medium">
+                {locale.record.press_discard}
               </p>
             </div>
           </ActionText>
